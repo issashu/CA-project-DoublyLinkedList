@@ -12,7 +12,7 @@ int main(int argc, char *argv){
     short Selection = 0;
     gHead = (TDListNode*)malloc(sizeof(TDListNode));
     SetupList(&gHead, &gTail);
-    if(argv[1]=="-dev"){
+    //if(argv[1]=="-dev"){
         while(Selection!=6){
             Selection = DevMenu(Selection);
             switch (Selection){
@@ -41,9 +41,9 @@ int main(int argc, char *argv){
                 break;
             }
         }
-    }
+   /* }
     else{
         printf("Game not implemented yet.");
-    }
+    }*/
     return 0;
 }
