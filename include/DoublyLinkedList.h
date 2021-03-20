@@ -20,5 +20,6 @@ void AddBetween(TDListNode* Head);
 void RemoveNode(TDListNode** Head, TDListNode** Tail);
 short DevMenu(short Selector);
 void ListPrinter(TDListNode* Head);
+int ValidateEntry();
 
 #endif 

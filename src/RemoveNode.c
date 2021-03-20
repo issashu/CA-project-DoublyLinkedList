@@ -9,12 +9,12 @@
  * @param Tail - double pointer to the tail of the list
  */
 void RemoveNode(TDListNode** Head, TDListNode** Tail){
-    short KeyValue = 0;
+    int KeyValue = 0;
     KeyNode = (*Head);
     TDListNode* PrevPoint=(TDListNode*)malloc(sizeof(TDListNode));
     TDListNode* NextPoint=(TDListNode*)malloc(sizeof(TDListNode));
     printf("What value do you want deleted: ");
-    scanf("%hd", &KeyValue);
+    KeyValue = ValidateEntry();
     //Itterates to the node just before the one to delete
     while(KeyNode->m_nValue!=KeyValue){
         if(KeyNode->m_pNextNode==NULL){

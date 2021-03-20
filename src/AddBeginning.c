@@ -15,7 +15,7 @@ void AddBeginning (TDListNode** Head){
     else{
         TDListNode* NewNode = (TDListNode*) malloc(sizeof(TDListNode));
         printf("Enter value for the next element: ");
-        scanf("%d", &NewNode->m_nValue);
+        NewNode->m_nValue = ValidateEntry();
         NewNode->m_pNextNode = *Head;
         NewNode->m_pPrevNode = NULL;
         (*Head)->m_pPrevNode = NewNode;

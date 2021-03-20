@@ -13,11 +13,11 @@ void AddBetween(TDListNode* Head){
         SetupList(&gHead, &gTail);
     }
     else{
-        short KeyValue;
+        int KeyValue;
         KeyNode = Head;
         TDListNode* NewNode = (TDListNode*) malloc(sizeof(TDListNode));
         printf("What KeyValue do you need the value added after? ");
-        scanf("%hd", &KeyValue);
+        KeyValue = ValidateEntry();
         while(KeyNode->m_nValue != KeyValue){
             if(KeyNode->m_pNextNode==NULL){
                 printf("\n\nNo node contains the value %d\n\n", KeyValue);
@@ -33,7 +33,7 @@ void AddBetween(TDListNode* Head){
         }
         else{
             printf("Enter value for the next element: ");
-            scanf("%d", &NewNode->m_nValue);
+            NewNode->m_nValue = ValidateEntry();
             NewNode->m_pNextNode = KeyNode->m_pNextNode;
             NewNode->m_pPrevNode = KeyNode;
             KeyNode->m_pNextNode = NewNode;

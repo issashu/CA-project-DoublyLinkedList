@@ -16,7 +16,7 @@ void AppendEnd (TDListNode** Tail){
     else{
         TDListNode* NewNode = (struct TDListNode*)malloc(sizeof(TDListNode));
         printf("Enter value for the next element: ");
-        scanf("%d", &NewNode->m_nValue);
+        NewNode->m_nValue = ValidateEntry();
         (*Tail)->m_pNextNode = NewNode;
         NewNode->m_pNextNode = NULL;
         NewNode->m_pPrevNode = (*Tail);
