@@ -14,13 +14,13 @@ void AddBetween(TDListNode* Head){
     TDListNode* NewNode = (TDListNode*) malloc(sizeof(TDListNode));
     printf("Enter value for the next element: ");
     scanf("%d", &NewNode->m_nValue);
-    printf("What KeyValue do you need the value added: ");
+    printf("What KeyValue do you need the value added after? ");
     scanf("%hd", &KeyValue);
-    for(int i=0; i<KeyValue-1; i++){
+    while(KeyNode->m_nValue != KeyValue){
         KeyNode = KeyNode->m_pNextNode;
     }
     NewNode->m_pNextNode = KeyNode->m_pNextNode;
-    KeyNode->m_pNextNode->m_pPrevNode = NewNode;
     NewNode->m_pPrevNode = KeyNode;
     KeyNode->m_pNextNode = NewNode;
+    KeyNode->m_pNextNode->m_pPrevNode = NewNode;
 }

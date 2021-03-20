@@ -30,6 +30,7 @@ short DevMenu(short Selector){
 void ListPrinter(TDListNode* Head){
     TDListNode* PrintPoint = Head;
     int i=0;
+    system("clear");
     if(Head==NULL){
         printf("Nothing to print!\n");
         return;

@@ -29,7 +29,7 @@ void RemoveNode(TDListNode** Head, TDListNode** Tail){
         if((*Head)->m_pPrevNode==NULL && (*Head)->m_pNextNode==NULL){
             printf("List is empty now\n");
             free(*Head);
-            free(*Tail);
+            //free(*Tail);
             (*Head) = NULL;
             (*Tail) = NULL;
             NodeCounter = 0;
