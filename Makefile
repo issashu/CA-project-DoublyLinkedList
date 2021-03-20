@@ -1,6 +1,8 @@
 #
 # 'make'        build executable file 'main'
 # 'make clean'  removes all .o and executable files
+# 'make run'    builds executable file 'main' and runs it
+# 'make mem'    builds and runs the executable using Valgrind for memory debugging (Linux only)
 #
 
 # define the C compiler to use
