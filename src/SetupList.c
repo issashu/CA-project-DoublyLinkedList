@@ -9,6 +9,7 @@
  * @param Tail - double pointer to the Tail of the list
  */
 void SetupList(TDListNode** Head, TDListNode** Tail){
+    gHead = (TDListNode*)malloc(sizeof(TDListNode));
     printf("Please enter a value for the first element of the list: ");
     scanf("%d", &(*Head)->m_nValue);
     (*Head)->m_pNextNode = NULL;

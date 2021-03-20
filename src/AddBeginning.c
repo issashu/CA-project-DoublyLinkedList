@@ -9,12 +9,18 @@
  * @param Head - double pointer to the head of the list
  */
 void AddBeginning (TDListNode** Head){
-    TDListNode* NewNode = (TDListNode*) malloc(sizeof(TDListNode));
-    printf("Enter value for the next element: ");
-    scanf("%d", &NewNode->m_nValue);
-    NewNode->m_pNextNode = *Head;
-    NewNode->m_pPrevNode = NULL;
-    (*Head)->m_pPrevNode = NewNode;
-    *Head = NewNode;
-    NodeCounter++;
+    if((*Head)==NULL){
+        SetupList(&gHead, &gTail);
+    }
+    else{
+        TDListNode* NewNode = (TDListNode*) malloc(sizeof(TDListNode));
+        printf("Enter value for the next element: ");
+        scanf("%d", &NewNode->m_nValue);
+        NewNode->m_pNextNode = *Head;
+        NewNode->m_pPrevNode = NULL;
+        (*Head)->m_pPrevNode = NewNode;
+        *Head = NewNode;
+        NodeCounter++;
+    }
+    
 }
