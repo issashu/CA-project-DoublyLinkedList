@@ -28,10 +28,10 @@ void AddBetween(TDListNode* Head){
             }
         }
         
-        if(KeyNode==Head){
+       /* if(KeyNode==Head){
             AddBeginning(&gHead);
         }
-        else{
+        else{*/
             printf("Enter value for the next element: ");
             NewNode->m_nValue = ValidateEntry();
             NewNode->m_pNextNode = KeyNode->m_pNextNode;
@@ -39,6 +39,6 @@ void AddBetween(TDListNode* Head){
             KeyNode->m_pNextNode = NewNode;
             KeyNode->m_pNextNode->m_pPrevNode = NewNode;
             NodeCounter++;
-        }
+       // }
     }
 }

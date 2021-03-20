@@ -9,6 +9,10 @@
  * @param Tail - double pointer to the tail of the list
  */
 void RemoveNode(TDListNode** Head, TDListNode** Tail){
+    if((*Head)==NULL){
+            printf("List is currently empty. Nothing to delete!\n");
+            return;
+        }
     int KeyValue = 0;
     KeyNode = (*Head);
     TDListNode* PrevPoint=(TDListNode*)malloc(sizeof(TDListNode));
@@ -29,7 +33,6 @@ void RemoveNode(TDListNode** Head, TDListNode** Tail){
         if((*Head)->m_pPrevNode==NULL && (*Head)->m_pNextNode==NULL){
             printf("List is empty now\n");
             free(*Head);
-            //free(*Tail);
             (*Head) = NULL;
             (*Tail) = NULL;
             NodeCounter = 0;

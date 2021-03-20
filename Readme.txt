@@ -9,3 +9,6 @@ typedef struct TDListNode {
     struct TDListNode* m_pNextNode; 
     struct TDListNode* m_pPrevNode; 
 } TDListNode;
+
+Refferences:
+1. https://www.geeksforgeeks.org/doubly-linked-list/
