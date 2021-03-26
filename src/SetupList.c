@@ -10,6 +10,7 @@
  */
 void SetupList(TDListNode** Head, TDListNode** Tail){
     gHead = (TDListNode*)malloc(sizeof(TDListNode));
+    system("clear");
     printf("Please enter a value for the first element of the list: ");
     (*Head)->m_nValue = ValidateEntry();
     (*Head)->m_pNextNode = NULL;

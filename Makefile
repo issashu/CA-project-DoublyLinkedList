@@ -2,7 +2,7 @@
 # 'make'        build executable file 'main'
 # 'make clean'  removes all .o and executable files
 # 'make run'    builds executable file 'main' and runs it
-# 'make mem'    builds and runs the executable using Valgrind for memory debugging (Linux only)
+# 'make mem'    builds and runs the executable using Valgrind for memory debugging (Linux/Mac OS only)
 #
 
 # define the C compiler to use
@@ -89,12 +89,12 @@ clean:
 	@echo Cleanup complete!
 
 mem: all
-	valgrind ./$(OUTPUTMAIN) --leak-check=full
+	valgrind ./$(OUTPUTMAIN) --leak-check=full --track-origins=yes
 	@echo Executing 'run: dev' complete!
 
-run: all
+dev: all
 	./$(OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
 
-dev: all
-	./$(OUTPUTMAIN) -dev
+run: all
+	./$(OUTPUTMAIN)

@@ -10,5 +10,10 @@ typedef struct TDListNode {
     struct TDListNode* m_pPrevNode; 
 } TDListNode;
 
-Refferences:
-1. https://www.geeksforgeeks.org/doubly-linked-list/
+
+
+Refferences used:
+1. Doubly Linked List - https://www.geeksforgeeks.org/doubly-linked-list/
+2. Algorithms and Data Structures in C++ - https://www.udemy.com/course/algorithms-bootcamp-in-c/
+3. The C and C++ language vol. 2 - Liviu Negrescu
+

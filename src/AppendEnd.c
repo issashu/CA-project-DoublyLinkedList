@@ -20,7 +20,7 @@ void AppendEnd (TDListNode** Tail){
         (*Tail)->m_pNextNode = NewNode;
         NewNode->m_pNextNode = NULL;
         NewNode->m_pPrevNode = (*Tail);
-        *Tail = NewNode;
+        (*Tail) = NewNode;
         NodeCounter++;
     }
 }

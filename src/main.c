@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "DoublyLinkedList.h"
-//test
-short NodeCounter = 0;
 
-TDListNode* gHead;
-TDListNode* gTail;
-TDListNode* KeyNode;
+short NodeCounter;
 
-int main(int argc, char *argv){
+TDListNode* gHead=NULL;
+TDListNode* gTail=NULL;
+TDListNode* KeyNode=NULL;
+
+int main(){
+    NodeCounter = 0;
     short Selection = 0;
     SetupList(&gHead, &gTail);
         while(Selection!=6){
@@ -19,7 +20,7 @@ int main(int argc, char *argv){
                 break;
 
                 case 2:
-                    AddBetween(gHead);
+                    AddBetween(&gHead, &gTail);
                 break;
 
                 case 3:
@@ -35,6 +36,7 @@ int main(int argc, char *argv){
                 break;
 
                 case 6:
+                    system("clear");
                     printf("Have a nice day! See you soon!\n");
                 break;
             }

@@ -1,5 +1,5 @@
-#ifndef DOUBLYLINKEDLIST
-#define DOUBLYLINKEDLIST
+#ifndef DOUBLYLINKEDLIST_H
+#define DOUBLYLINKEDLIST_H
 
 typedef struct TDListNode { 
   int m_nValue; 
@@ -16,10 +16,10 @@ extern TDListNode* KeyNode;
 void SetupList(TDListNode** Head, TDListNode** Tail);
 void AddBeginning (TDListNode** Head);
 void AppendEnd (TDListNode** Tail);
-void AddBetween(TDListNode* Head);
+void AddBetween(TDListNode** Head, TDListNode** Tail);
 void RemoveNode(TDListNode** Head, TDListNode** Tail);
 short DevMenu(short Selector);
 void ListPrinter(TDListNode* Head);
 int ValidateEntry();
 
-#endif 
+#endif /*DOUBLYLINKEDLIST_H*/ 
